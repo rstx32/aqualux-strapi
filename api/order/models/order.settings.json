@@ -56,16 +56,6 @@
       "model": "branch",
       "via": "orders"
     },
-    "users_permissions_user": {
-      "plugin": "users-permissions",
-      "model": "user",
-      "via": "orders"
-    },
-    "closer": {
-      "via": "orders",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "package": {
       "model": "package",
       "via": "order"
