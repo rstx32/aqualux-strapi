@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/provinsis",
+      "handler": "provinsi.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/provinsis/count",
+      "handler": "provinsi.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/provinsis/:id",
+      "handler": "provinsi.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/provinsis",
+      "handler": "provinsi.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/provinsis/:id",
+      "handler": "provinsi.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/provinsis/:id",
+      "handler": "provinsi.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

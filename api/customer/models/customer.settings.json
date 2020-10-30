@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "telepon": {
+      "type": "string",
+      "maxLength": 13,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "order": {
+      "model": "order",
+      "via": "customer_id"
+    },
+    "address": {
+      "model": "address"
+    }
+  }
+}

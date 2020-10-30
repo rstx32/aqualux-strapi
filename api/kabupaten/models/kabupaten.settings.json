@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kabupatens",
+  "info": {
+    "name": "kabupaten",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "addresses": {
+      "via": "kabupaten_id",
+      "collection": "address"
+    },
+    "kecamatans": {
+      "collection": "kecamatan",
+      "via": "kabupaten_id"
+    },
+    "provinsi_id": {
+      "model": "provinsi",
+      "via": "kabupatens"
+    }
+  }
+}

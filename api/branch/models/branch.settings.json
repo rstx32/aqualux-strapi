@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "branches",
+  "info": {
+    "name": "branch",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "model": "address"
+    },
+    "orders": {
+      "via": "branch_id",
+      "collection": "order"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kabupatens",
+      "handler": "kabupaten.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kabupatens/count",
+      "handler": "kabupaten.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kabupatens/:id",
+      "handler": "kabupaten.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kabupatens",
+      "handler": "kabupaten.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kabupatens/:id",
+      "handler": "kabupaten.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kabupatens/:id",
+      "handler": "kabupaten.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

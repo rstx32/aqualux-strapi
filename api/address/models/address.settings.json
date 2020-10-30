@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "address",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "jalan": {
+      "type": "string",
+      "required": true
+    },
+    "provinsi_id": {
+      "model": "provinsi",
+      "via": "addresses"
+    },
+    "kabupaten_id": {
+      "model": "kabupaten",
+      "via": "addresses"
+    },
+    "kecamatan_id": {
+      "model": "kecamatan",
+      "via": "addresses"
+    }
+  }
+}

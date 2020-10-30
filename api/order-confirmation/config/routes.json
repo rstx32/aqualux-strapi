@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/order-confirmations",
+      "handler": "order-confirmation.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/order-confirmations/count",
+      "handler": "order-confirmation.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/order-confirmations/:id",
+      "handler": "order-confirmation.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/order-confirmations",
+      "handler": "order-confirmation.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/order-confirmations/:id",
+      "handler": "order-confirmation.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/order-confirmations/:id",
+      "handler": "order-confirmation.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

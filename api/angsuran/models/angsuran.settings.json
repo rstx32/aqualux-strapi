@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "angsurans",
+  "info": {
+    "name": "angsuran",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nominal": {
+      "type": "integer",
+      "required": false
+    },
+    "tanggal": {
+      "type": "date"
+    },
+    "order_confirmationId": {
+      "via": "angsurans",
+      "model": "order-confirmation"
+    }
+  }
+}

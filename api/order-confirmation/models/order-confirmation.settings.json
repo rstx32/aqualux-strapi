@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_confirmations",
+  "info": {
+    "name": "order_confirmation",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "konfirmasi": {
+      "type": "enumeration",
+      "enum": [
+        "terima",
+        "tolak"
+      ],
+      "required": true
+    },
+    "uang_muka": {
+      "type": "float"
+    },
+    "booking_fee": {
+      "type": "decimal"
+    },
+    "jumlah_angsuran": {
+      "type": "integer"
+    },
+    "jatuh_tempo": {
+      "type": "date"
+    },
+    "tanggal": {
+      "type": "date"
+    },
+    "order_id": {
+      "model": "order",
+      "via": "order_confirmation"
+    },
+    "angsurans": {
+      "collection": "angsuran",
+      "via": "order_confirmationId"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "provinsis",
+  "info": {
+    "name": "provinsi"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "addresses": {
+      "via": "provinsi_id",
+      "collection": "address"
+    },
+    "kabupatens": {
+      "via": "provinsi_id",
+      "collection": "kabupaten"
+    }
+  }
+}

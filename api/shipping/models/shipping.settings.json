@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shippings",
+  "info": {
+    "name": "shipping",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "surat_jalan": {
+      "type": "richtext",
+      "required": true
+    },
+    "jadwal": {
+      "type": "date",
+      "required": true
+    },
+    "catatan": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "perjalanan",
+        "sampai"
+      ]
+    },
+    "order_id": {
+      "model": "order"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kecamatans",
+  "info": {
+    "name": "kecamatan",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "kode_pos": {
+      "type": "string",
+      "maxLength": 5,
+      "required": true,
+      "unique": false
+    },
+    "addresses": {
+      "via": "kecamatan_id",
+      "collection": "address"
+    },
+    "kabupaten_id": {
+      "via": "kecamatans",
+      "model": "kabupaten"
+    }
+  }
+}
