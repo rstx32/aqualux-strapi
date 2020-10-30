@@ -58,19 +58,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "jabatan": {
-      "type": "string",
-      "required": true
-    },
-    "telepon": {
-      "type": "string",
-      "maxLength": 13,
-      "required": true
-    },
-    "orders": {
-      "collection": "order",
-      "via": "closer"
     }
   }
 }
